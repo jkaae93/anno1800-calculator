@@ -53,13 +53,11 @@ class IslandsInfoPage extends GetView<IslandsInfoController> {
                         content: SizedBox(width: 800, height: 800, child: AddIslandsView(context, controller)),
                       );
                     },
-                    child: Container(
-                      child: Row(
-                        children: [
-                          const Icon(Icons.add_location_alt),
-                          Text('add_island'.tr),
-                        ],
-                      ),
+                    child: Row(
+                      children: [
+                        const Icon(Icons.add_location_alt),
+                        Text('add_island'.tr),
+                      ],
                     ),
                   ),
                 ],

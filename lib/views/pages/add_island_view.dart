@@ -24,6 +24,7 @@ class _AddIslandsViewState extends State<AddIslandsView> {
           children: [
             Container(
               height: 100,
+              padding: const EdgeInsets.all(20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -96,6 +97,7 @@ class _AddIslandsViewState extends State<AddIslandsView> {
                     default:
                   }
                   return Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: CitizenTypes.values
                         .sublist(start, end)
                         .map((e) => CitizenCounter(

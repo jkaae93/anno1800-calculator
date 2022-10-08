@@ -161,6 +161,11 @@ class Styles {
     'timber': 'wooden_planks.png',
     'wool': 'wool.png',
     'workClothes': 'work-clothes.webp',
+    'glass': 'Glass.webp',
+    'advancedWeapons': 'Advanced_weapons.webp',
+    'zinc': 'Zinc.webp',
+    'elevators': 'Elevators.webp',
+    'cement': 'Cement.webp',
   };
 
   static String getProductImg(String key) => 'assets/image/${_products[key] ?? ''}';

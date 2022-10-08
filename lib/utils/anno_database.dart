@@ -137,7 +137,7 @@ class AnnoDatabase extends GetxController {
   }
 
   Future<void> getDemands() async {
-    var res = await db
+    await db
         .collection('demands')
         .withConverter<DemandsInfo>(
           fromFirestore: (s, _) => DemandsInfo.fromMap(s.data()!),

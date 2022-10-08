@@ -1,5 +1,5 @@
-import 'dart:html';
 
+import 'package:anno_calc/i18n/i18n.dart';
 import 'package:anno_calc/models/trade_route.dart';
 import 'package:anno_calc/utils/anno_database.dart';
 import 'package:anno_calc/views/add_route_view.dart';

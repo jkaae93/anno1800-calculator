@@ -1,7 +1,6 @@
 import 'package:anno_calc/controller/init_controller.dart';
 import 'package:anno_calc/firebase_options.dart';
 import 'package:anno_calc/i18n/i18n.dart';
-import 'package:anno_calc/models/trade_route.dart';
 import 'package:anno_calc/utils/anno_database.dart';
 import 'package:anno_calc/views/trade_routes_view.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -21,12 +20,7 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp((GetMaterialApp(
-    translations: I18n(),
-    locale: Get.deviceLocale,
-    fallbackLocale: const Locale('en', 'US'),
-    home: const Home(),
-  )));
+  runApp(const Home());
 }
 
 class Home extends StatefulWidget {
@@ -38,7 +32,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final InitController _init = Get.put(InitController());
-  int _idx = 3;
+  int _idx = 0;
   String test = '';
 
   @override
@@ -55,7 +49,10 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+        translations: I18n(),
+        locale: Get.deviceLocale,
+        fallbackLocale: const Locale('en', 'US'),
         theme: FlexThemeData.light(
           scheme: FlexScheme.mallardGreen,
           surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
